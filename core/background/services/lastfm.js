@@ -11,8 +11,9 @@ define([
 	'vendor/md5',
 	'wrappers/can',
 	'objects/serviceCallResult',
-	'chromeStorage'
-], function ($, config, MD5, can, ServiceCallResultFactory, ChromeStorage) {
+	'chromeStorage',
+	'services/open-scrobble'
+], function ($, config, MD5, can, ServiceCallResultFactory, ChromeStorage, OpenScrobble) {
 
 	var enableLogging = true;
 
@@ -233,6 +234,8 @@ define([
 		} else {
 			console.error('Unknown method: ' + method);
 		}
+
+		OpenScrobble.scrobble(method, paramPairs.join('&'));
 	}
 
 

@@ -34,6 +34,7 @@
       "notifications",
       "storage",
       "https://ws.audioscrobbler.com/2.0/",
+      "http://scrobble.akenn.org/v0.1/",
       "https://gdata.youtube.com/feeds/api/videos/",
       "http://*/",
       "https://*/"
